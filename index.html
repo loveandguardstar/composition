@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高级圣杯布局</title>
+    <style>
+        body {
+            padding : 0; margin : 0; min-width: 500px;
+        }
+        .header, .footer {
+            background-color: #8a8a8a;
+            height: 100px;
+            text-align: center;
+        }
+        .main:after {
+            display: block;
+            content: "clear";
+            clear: both;
+            visibility: hidden;
+            line-height: 0;
+        }
+        .main {
+            height:360px;
+        }
+        .extra {
+            float: left;
+            width: 100px;
+            height:100%;
+            background: yellowgreen;
+        }
+        .sub {
+            float: right;
+            width: 100px;
+            height:100%;
+            background: yellowgreen;
+        }
+        .inner {
+            margin-left: 100px;
+            margin-right: 100px;
+            height:100%;
+            background-color: #00c3f5;
+        }
+        .extra, .sub, .inner {
+            text-align: center;
+            line-height: 240px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">header</header>
+    <section class="main">
+        <div class="extra">left</div>
+        <div class="sub">right</div>
+        <div class="inner">content</div>
+    </section>
+    <footer class="footer">footer</footer>
+</body>
+</html>
